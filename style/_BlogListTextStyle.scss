@@ -1,0 +1,27 @@
+// --------部落格列表標題字--------------
+.list-content{       
+        display: flex;
+        flex-direction: column;
+        .tag-bar{
+            display: flex;
+            align-items: center;
+        }
+        .tag{
+            font-size: 1.5rem;
+            color:$maincolor;
+            &:hover{
+                color: lighten($maincolor, 30%);
+            }
+            &:active{
+                color: darken($maincolor, 20%);
+            }
+        }
+        .high-light{
+            color: #fff;
+            background-color: $maincolor;
+            border-radius: 25px;
+            padding: 4px 12px;
+        }
+    }
+
+// --------部落格標題字--------------

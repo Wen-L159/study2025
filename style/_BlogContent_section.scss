@@ -1,0 +1,31 @@
+// -------------BlogContent_section----------------
+
+.bctop-hero{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #6C757D;
+    .bctop-img{
+        flex:1;
+    }
+    .bctop{
+        flex:1;
+        .content-title{
+        font-size: 1.75rem;
+        font-weight: bold;
+        }
+    }
+    
+}
+@media (max-width: 577px){
+    .bctop-hero{
+        flex-direction: column;
+        .bctop{
+        padding: 48px 12px;
+        }
+    }
+    
+}
+
+

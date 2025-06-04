@@ -1,0 +1,21 @@
+.contact-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 10%;
+    h3{
+        font-size: 2rem;
+    }
+    .social-link{
+        display: flex;
+    }
+}
+.copyright{
+    text-align: center;
+    padding: 24px 0;
+}
+
+@media(max-width:577px){
+    .contact-info{
+        display: none;
+    }
+}

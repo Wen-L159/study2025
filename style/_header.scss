@@ -1,0 +1,102 @@
+.top-nav{
+   ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;        
+        list-style: none;
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.75rem;
+            color: #000;
+            padding: 20px;
+            &:hover{
+                color: grey;
+            }
+            &:active{
+                background-color: grey;
+                color: #fff;
+            }
+        }
+    }
+}
+.banner{
+    display: flex;
+    position: relative;
+    padding-bottom: 200px;
+}
+.title{
+    flex:1;
+}
+.person{
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true");
+        background-size:cover ;
+        background-position:center;
+        height: 834px;
+}
+.bg{
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+        background-size:cover ;
+        background-position:center;
+        color: $maincolor;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p{
+            font-size: 6.5rem;
+            font-weight: bold; 
+            margin: 0 60px; 
+        }
+        h1{
+            margin: 0 60px;
+        }
+}
+.intor{
+    position: absolute;
+    bottom: 0;
+    right:3%;
+    background: #fff;
+    padding: 20px 40px;
+    width: 55%;
+    z-index: 2;
+    font-size: 1.75rem;
+    font-weight: 500;
+    ul{
+        display: flex;
+        justify-content: start;
+        list-style: none;
+        padding: 0;
+    }
+}
+
+@media(max-width:577px){
+    .banner{
+        display: block;
+        padding-bottom: 0;
+        .title{
+            flex:0;
+        }
+        .person{
+            height: 375px;
+        }
+        .bg{
+            height: 356px;
+            justify-content: start;
+            p{
+                font-size: 2.5rem;
+            }
+            h1{
+                font-size: 1.3rem;
+            }
+        }
+        .intor{
+            font-size: 1.25rem;
+            position: static;
+            margin: 0 auto;
+            padding: 30px 24px;
+            width: 85%;
+            margin-top: -240px;
+        }
+    }
+}
