@@ -1,0 +1,62 @@
+/*!--------------Banner------------------*/
+
+.banner-proflie{
+    display: flex;
+    .banner-photo,.banner-infor{
+        flex:1;
+    }
+    .banner-infor{
+        padding-left: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .banner-title{
+            color: $maincolor;
+            font-size: 5rem;
+            font-weight: 900;
+        }
+        .banner-subtitle{
+            color: $maincolor;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+    }
+}
+.banner-self-intro{
+    background-color: #c8a7a7;
+    width: 56%;
+    padding: 64px 40px;
+    position: relative;
+    margin-right: 80px;
+    margin-left: auto;
+    margin-top: -100px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    P{
+        margin: 8px 0;
+    }
+    .banner-social-link{
+        display: flex;
+    }
+}
+@media (max-width: 1000px){
+    .banner-proflie{
+        flex-direction: column;
+        .banner-infor{
+            justify-content: start;
+            padding: 24px;
+            .banner-title{
+                font-size: 4rem;
+            }
+        }
+    }
+    .banner-self-intro{
+        width: calc(100% - 24px);
+        margin: 0 auto ;
+    }
+}

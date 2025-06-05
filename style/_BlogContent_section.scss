@@ -1,5 +1,4 @@
-// -------------BlogContent_section----------------
-
+/*!------------BlogContent_HEROsection--------------*/
 .bctop-hero{
     display: flex;
     align-items: center;
@@ -11,6 +10,7 @@
     }
     .bctop{
         flex:1;
+        padding-left: 24px;
         .content-title{
         font-size: 1.75rem;
         font-weight: bold;
@@ -18,7 +18,7 @@
     }
     
 }
-@media (max-width: 577px){
+@media (max-width: 1000px){
     .bctop-hero{
         flex-direction: column;
         .bctop{

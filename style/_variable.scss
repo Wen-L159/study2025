@@ -1,5 +1,8 @@
+/*!-----------變數 & 全域設定---------------*/
+
 $maincolor:#0027D5;
 $subcolor:#EDEDED;
+$bg-subcolor:#FBFBFB;
 body{
     background-color: #FBFBFB;
 }
@@ -15,7 +18,7 @@ body{
 h2{
     font-size: 4rem;
     font-weight: bold;
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
 }
 h3{
     font-size: 1.75rem;

@@ -67,6 +67,7 @@ img {
 }
 
 /*--------------------------*/
+/*!-----------變數 & 全域設定---------------*/
 body {
   background-color: #FBFBFB;
 }
@@ -84,7 +85,6 @@ body {
 h2 {
   font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 32px;
 }
 
 h3 {
@@ -93,6 +93,7 @@ h3 {
   margin: 10px 0;
 }
 
+/*!-----------部落格列表標題字 BlogListTextStyle---------------*/
 .list-content {
   display: flex;
   flex-direction: column;
@@ -100,6 +101,7 @@ h3 {
 .list-content .tag-bar {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .list-content .tag {
   font-size: 1.5rem;
@@ -116,8 +118,39 @@ h3 {
   background-color: #0027D5;
   border-radius: 25px;
   padding: 4px 12px;
+  margin-left: 8px;
+}
+.list-content .blog-content-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+.list-content .blog-preview {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 文本要顯示幾行 */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.list-content .read-link {
+  display: block;
+  margin-top: 16px;
+  width: 99px;
+  padding: 8px 16px;
+  border: 1px solid #000;
+  border-radius: 40px;
+  font-size: 16px;
+  text-align: center;
+  color: #4B4B4B;
+}
+.list-content .read-link:hover {
+  background-color: #EDEDED;
+}
+.list-content .read-link:active {
+  background-color: grey;
+  color: #fff;
 }
 
+/*!-----------header---------------*/
 .top-nav ul {
   display: flex;
   justify-content: center;
@@ -140,176 +173,175 @@ h3 {
   color: #fff;
 }
 
-.banner {
+/*!--------------Banner------------------*/
+.banner-proflie {
   display: flex;
-  position: relative;
-  padding-bottom: 200px;
 }
-
-.title {
+.banner-proflie .banner-photo, .banner-proflie .banner-infor {
   flex: 1;
 }
-
-.person {
-  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true");
-  background-size: cover;
-  background-position: center;
-  height: 834px;
-}
-
-.bg {
-  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
-  background-size: cover;
-  background-position: center;
-  color: #0027D5;
+.banner-proflie .banner-infor {
+  padding-left: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.bg p {
-  font-size: 6.5rem;
-  font-weight: bold;
-  margin: 0 60px;
+.banner-proflie .banner-infor .banner-title {
+  color: #0027D5;
+  font-size: 5rem;
+  font-weight: 900;
 }
-.bg h1 {
-  margin: 0 60px;
+.banner-proflie .banner-infor .banner-subtitle {
+  color: #0027D5;
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
-.intor {
-  position: absolute;
-  bottom: 0;
-  right: 3%;
-  background: #fff;
-  padding: 20px 40px;
-  width: 55%;
-  z-index: 2;
-  font-size: 1.75rem;
+.banner-self-intro {
+  background-color: #c8a7a7;
+  width: 56%;
+  padding: 64px 40px;
+  position: relative;
+  margin-right: 80px;
+  margin-left: auto;
+  margin-top: -100px;
+  font-size: 1.25rem;
   font-weight: 500;
 }
-.intor ul {
+.banner-self-intro P {
+  margin: 8px 0;
+}
+.banner-self-intro .banner-social-link {
   display: flex;
-  justify-content: start;
-  list-style: none;
-  padding: 0;
 }
 
-@media (max-width: 577px) {
-  .banner {
-    display: block;
-    padding-bottom: 0;
+@media (max-width: 1000px) {
+  .banner-proflie {
+    flex-direction: column;
   }
-  .banner .title {
-    flex: 0;
-  }
-  .banner .person {
-    height: 375px;
-  }
-  .banner .bg {
-    height: 356px;
+  .banner-proflie .banner-infor {
     justify-content: start;
+    padding: 24px;
   }
-  .banner .bg p {
-    font-size: 2.5rem;
+  .banner-proflie .banner-infor .banner-title {
+    font-size: 4rem;
   }
-  .banner .bg h1 {
-    font-size: 1.3rem;
-  }
-  .banner .intor {
-    font-size: 1.25rem;
-    position: static;
+  .banner-self-intro {
+    width: calc(100% - 24px);
     margin: 0 auto;
-    padding: 30px 24px;
-    width: 85%;
-    margin-top: -240px;
   }
 }
-.container {
+.index-main {
   padding: 80px 10%;
-  border-bottom: 20px solid grey;
 }
-
-.item-intro {
-  max-width: 80%;
-  margin: 0 auto;
-  margin-bottom: 32px;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-}
-.item-intro img {
-  max-width: 636px;
-}
-.item-intro .service-intro-content {
-  background-color: #fff;
-  max-width: 480px;
-  padding: 20px;
-  position: absolute;
-  z-index: 2;
-  margin-left: 60%;
-}
-.item-intro .service-intro-content .dash {
-  margin: 20px 0;
+.index-main .deco-pin {
+  background-color: #0027D5;
   width: 30px;
   height: 2.5px;
-  background-color: #0027D5;
-  border-radius: 25px;
+  margin: 18px 5px;
 }
 
-.item-intro.flip {
+.index-main-title {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1000px) {
+  .index-main-title {
+    font-size: 3rem;
+  }
+}
+/*!------------index-main 服務方案--------------*/
+.service .service-list {
+  padding: 0 5%;
+}
+
+.slist-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 64px;
+}
+.slist-item .slist-img {
+  width: 60%;
+}
+.slist-item .slist-content {
+  background-color: #fff;
+  padding: 24px;
+  width: 40%;
+  position: relative;
+  z-index: 2;
+}
+
+/*!------------index-main 交錯--------------*/
+.list-typeset .slist-img {
+  margin-right: -40px;
+}
+
+.list-typeset-flip {
   flex-direction: row-reverse;
-  margin-bottom: 0;
-  margin-top: 32px;
 }
-.item-intro.flip .service-intro-content.flip-p {
-  margin-left: 0px;
-  margin-right: 600px;
+.list-typeset-flip .slist-img {
+  margin-left: -40px;
 }
 
-.moreinfor {
+.service-contact {
   text-align: right;
 }
-.moreinfor a {
+.service-contact a {
   font-size: 1.75rem;
   font-weight: bold;
   color: #000;
 }
-.moreinfor a:hover {
-  color: grey;
-}
-.moreinfor a:active {
-  color: #fff;
-}
-.moreinfor span {
-  font-size: 1.75rem;
-  border: 1px solid #000;
-  border-radius: 100%;
-  padding: 0 0.4rem;
+.service-contact a:hover {
+  color: #0027D5;
 }
 
-@media (max-width: 577px) {
-  .container {
-    padding: 80px 2%;
-  }
-  .item-intro {
-    max-width: 100%;
+@media (max-width: 1000px) {
+  .slist-item {
     flex-direction: column;
-    position: static;
   }
-  .item-intro .service-intro-content {
-    position: static;
-    margin: 0;
-    max-width: 100%;
+  .slist-item .slist-img {
+    width: 100%;
   }
-  .item-intro.flip {
-    flex-direction: column;
-    position: static;
+  .slist-item .slist-content {
+    width: 100%;
   }
-  .item-intro.flip .service-intro-content.flip-p {
-    position: static;
-    margin: 0;
+  .list-typeset .slist-img, .list-typeset-flip .slist-img {
+    margin: 0 auto;
   }
 }
+/*!------------index-main 案例--------------*/
+.case-wrapper {
+  display: flex;
+  align-items: center;
+}
+.case-wrapper .case-img {
+  background-color: #EDEDED;
+  padding: 24px;
+  width: 60%;
+}
+.case-wrapper .case-content {
+  width: 40%;
+  font-weight: 700;
+}
+.case-wrapper .ca-content-top {
+  background-color: #fff;
+  padding: 80px 40px;
+  margin-left: -200px;
+  margin-right: 200px;
+}
+.case-wrapper .ca-content-top .ca-content-high {
+  color: #0027D5;
+}
+.case-wrapper .ca-content-bot {
+  background-color: #FBFBFB;
+  padding: 80px 40px;
+}
+
+/*!-----------通用的Footer---------------*/
 .contact-info {
   display: flex;
   justify-content: space-between;
@@ -332,6 +364,72 @@ h3 {
     display: none;
   }
 }
+.blog-list-page-main {
+  padding: 80px 10%;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: 1px solid #000;
+  border-radius: 40px;
+  width: 416px;
+  height: 56px;
+  padding: 16px;
+}
+
+.search-icon img {
+  width: 24px;
+  height: auto;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-list li {
+  margin: 40px 0px;
+  width: 32%;
+}
+
+.blog-list img {
+  margin-bottom: 10px;
+}
+
+.page-change ul {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.page-change a {
+  display: block;
+  color: gray;
+  padding: 8px 10px;
+  font-weight: bold;
+}
+
+.page-change a:hover {
+  color: var(--maincolor);
+}
+
+@media (max-width: 1000px) {
+  .blog-list li {
+    width: 100%;
+  }
+}
+/*!------------BlogContent_HEROsection--------------*/
 .bctop-hero {
   display: flex;
   align-items: center;
@@ -344,13 +442,14 @@ h3 {
 }
 .bctop-hero .bctop {
   flex: 1;
+  padding-left: 24px;
 }
 .bctop-hero .bctop .content-title {
   font-size: 1.75rem;
   font-weight: bold;
 }
 
-@media (max-width: 577px) {
+@media (max-width: 1000px) {
   .bctop-hero {
     flex-direction: column;
   }
@@ -358,6 +457,7 @@ h3 {
     padding: 48px 12px;
   }
 }
+/*!------------部落格文章內容--------------*/
 .bc-main {
   padding: 80px 28%;
   border-top: 1px solid;
@@ -423,7 +523,7 @@ h3 {
   color: #fff;
 }
 
-@media (max-width: 577px) {
+@media (max-width: 1000px) {
   .bc-main {
     padding: 50px 3%;
   }

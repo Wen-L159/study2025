@@ -1,0 +1,103 @@
+.index-main{
+    padding: 80px 10%;
+    .deco-pin{
+            background-color: $maincolor;
+            width: 30px;height: 2.5px;
+            margin: 18px 5px;
+        }
+}
+.index-main-title{
+    margin-bottom: 16px;
+}
+@media (max-width: 1000px){
+    .index-main-title{
+        font-size: 3rem;
+    }
+}
+/*!------------index-main 服務方案--------------*/
+.service{
+    .service-list{
+        padding: 0 5%;
+    }
+}
+
+.slist-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 64px;
+    .slist-img{
+        width: 60%;
+    }
+    .slist-content{
+        background-color: #fff;
+        padding: 24px;
+        width: 40%;
+        position: relative;
+        z-index: 2;
+        
+    }
+}
+/*!------------index-main 交錯--------------*/
+.list-typeset{
+    .slist-img{
+        margin-right: -40px;
+    }
+}
+.list-typeset-flip{
+    flex-direction: row-reverse;
+    .slist-img{
+        margin-left: -40px;
+    }
+}
+.service-contact{
+    text-align: right;
+    a{
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: #000;
+        &:hover{
+            color: $maincolor;
+        }
+    }
+}
+@media (max-width: 1000px){
+    .slist-item{
+        flex-direction: column;
+        .slist-img{
+        width: 100%;
+        }
+        .slist-content{
+        width: 100%;
+        }
+    }
+    .list-typeset,.list-typeset-flip{
+        .slist-img{margin: 0 auto;}
+    }
+}
+/*!------------index-main 案例--------------*/
+.case-wrapper{
+    display: flex;
+    align-items: center;
+    .case-img{
+        background-color: $subcolor;
+        padding: 24px;
+        width: 60%;
+    }
+    .case-content{
+        width: 40%;
+        font-weight: 700;
+    }
+    .ca-content-top{
+        background-color: #fff;
+        padding: 80px 40px;
+        margin-left: -200px;
+        margin-right: 200px;
+        .ca-content-high{
+            color: $maincolor;
+        }
+    }
+    .ca-content-bot{
+        background-color: $bg-subcolor;
+        padding: 80px 40px;
+    }
+}
