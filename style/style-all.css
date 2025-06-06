@@ -489,7 +489,7 @@ h3 {
   padding: 24px 0;
 }
 
-@media (max-width: 577px) {
+@media (max-width: 1000px) {
   .contact-info {
     display: none;
   }
@@ -556,6 +556,9 @@ h3 {
 
 @media (max-width: 1000px) {
   .blog-list li {
+    width: 100%;
+  }
+  .page-change ul {
     width: 100%;
   }
 }
